@@ -21,12 +21,12 @@ const router = createBrowserRouter(
     <>
       <Route>
         <Route element={<NavBar />}>
-          <Route path="/ServiciiLaClick-ProiectFA/" element={<HomePage />} />
-          <Route path="/ServiciiLaClick-ProiectFA/login" element={<LoginPage />} />
-          <Route path="/ServiciiLaClick-ProiectFA/register" element={<RegisterPage />} />
-          <Route path="/ServiciiLaClick-ProiectFA/produs" element={<ProductPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/produs" element={<ProductPage />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/ServiciiLaClick-ProiectFA/myaccount" element={<MyAccountPage />} />
+            <Route path="/myaccount" element={<MyAccountPage />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>
