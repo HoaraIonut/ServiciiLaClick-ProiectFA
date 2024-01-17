@@ -17,6 +17,7 @@ import MyAccountPage from "./components/MyAccountPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProductPage from "./pages/ProductPage";
 
+// codul pe care il facusem dar nu merge pe github
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
 //     <>

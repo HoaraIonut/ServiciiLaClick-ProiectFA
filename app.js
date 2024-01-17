@@ -10,10 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "proiectfa",
+  host: "sql8.freemysqlhosting.net",
+  user: "sql8677695",
+  password: "HcMzSjSnfr",
+  database: "sql8677695",
   port: 3306,
 });
 
@@ -22,7 +22,7 @@ const queryAsync = util.promisify(connection.query).bind(connection);
 app.post("/login", async (req, res) => {
   try {
     const posibilUtilizator = req.body;
-    const query = `SELECT count(ID) AS numarInregistrari FROM USERS WHERE email = ? and parola = ?`;
+    const query = `SELECT count(ID) AS numarInregistrari FROM users WHERE email = ? and parola = ?`;
     const raspunsCerere = await queryAsync(query, [
       posibilUtilizator.email,
       posibilUtilizator.parola,
@@ -45,7 +45,7 @@ app.post("/register", (req, res) => {
   if (utilizatorNou.acordOferte) utilizatorNou.acordOferte = "true";
   else utilizatorNou.acordOferte = "false";
   connection.query(
-    "SELECT MAX(ID) AS lastID from USERS",
+    "SELECT MAX(ID) AS lastID from users",
     (err, rows, fields) => {
       if (err) {
         console.log("A aparut o eroare la opținerea ultimului id.", err.stack);
@@ -73,7 +73,7 @@ app.post("/register", (req, res) => {
 app.get("/myaccount", (req, res) => {
   const emailCautat = req.query.email;
   async function queryMyAccount() {
-    const query = `SELECT * FROM USERS WHERE email = ?`;
+    const query = `SELECT * FROM users WHERE email = ?`;
     const raspunsCerere = await queryAsync(query, [emailCautat]);
     const userCautat = {
       nume: raspunsCerere[0].NUME,
@@ -90,7 +90,7 @@ app.post("/deleteMyAccount", (req, res) => {
   try {
     const email = req.body.email;
     async function deleteMyAccount() {
-      const query = "DELETE FROM Users WHERE EMAIL = ?";
+      const query = "DELETE FROM users WHERE EMAIL = ?";
       await queryAsync(query, [email]);
     }
     deleteMyAccount();
