@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ServiciiLaClick-ProiectFA/static/css/main.a99f2444.css",
-    "main.js": "/ServiciiLaClick-ProiectFA/static/js/main.7976c0b4.js",
+    "main.js": "/ServiciiLaClick-ProiectFA/static/js/main.ababeb98.js",
     "static/js/787.ff410b05.chunk.js": "/ServiciiLaClick-ProiectFA/static/js/787.ff410b05.chunk.js",
     "index.html": "/ServiciiLaClick-ProiectFA/index.html",
     "main.a99f2444.css.map": "/ServiciiLaClick-ProiectFA/static/css/main.a99f2444.css.map",
-    "main.7976c0b4.js.map": "/ServiciiLaClick-ProiectFA/static/js/main.7976c0b4.js.map",
+    "main.ababeb98.js.map": "/ServiciiLaClick-ProiectFA/static/js/main.ababeb98.js.map",
     "787.ff410b05.chunk.js.map": "/ServiciiLaClick-ProiectFA/static/js/787.ff410b05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a99f2444.css",
-    "static/js/main.7976c0b4.js"
+    "static/js/main.ababeb98.js"
   ]
 }
