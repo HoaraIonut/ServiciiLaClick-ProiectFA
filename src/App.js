@@ -19,7 +19,7 @@ import ProductPage from "./pages/ProductPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {/* <Route>
+      <Route>
         <Route element={<NavBar />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -30,31 +30,7 @@ const router = createBrowserRouter(
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Route>
-      </Route> */}
-
-      <>
-        <Route
-          path="/"
-          element={
-            <>
-              <NavBar />
-              <Route index element={<HomePage />} />
-            </>
-          }
-        />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/produs" element={<ProductPage />} />
-        <Route
-          path="/myaccount"
-          element={
-            <ProtectedRoute>
-              <MyAccountPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<PageNotFound />} />
-      </>
+      </Route>
     </>
   ), { basename: '/ServiciiLaClick-ProiectFA' }
 );
