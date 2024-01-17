@@ -56,7 +56,7 @@ const router = createBrowserRouter(
         <Route path="*" element={<PageNotFound />} />
       </>
     </>
-  )
+  ), { basename: '/ServiciiLaClick-ProiectFA' }
 );
 
 function App() {
