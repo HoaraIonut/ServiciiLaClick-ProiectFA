@@ -42,7 +42,7 @@ function LoginForm() {
 
     try {
       const raspuns = await axios.post(
-        "https://serviciilaclick-proiectfa-backend.onrender.com",
+        "https://serviciilaclick-proiectfa-backend.onrender.com/login",
         posibilUtilizator
       );
       console.log("Cererea de conectare a fost trimisa cu succes.", raspuns);
