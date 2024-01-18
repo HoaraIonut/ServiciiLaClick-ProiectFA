@@ -22,8 +22,12 @@ function MyAccountPage() {
         dataNasterii: "",
       };
       try {
+        // const dateObtinute = await axios.get(
+        //   "http://localhost:5000/myaccount",
+        //   { params: { email: dateUser.email } }
+        // );
         const dateObtinute = await axios.get(
-          "http://localhost:5000/myaccount",
+          "https://proiectfa-backend-production.up.railway.app/myaccount",
           { params: { email: dateUser.email } }
         );
         console.log(

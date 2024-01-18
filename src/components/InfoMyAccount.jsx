@@ -26,7 +26,8 @@ function InfoMyAccount(props) {
 
   const handleDeleteAccount = async () => {
     try {
-      await axios.post("http://localhost:5000/deleteMyAccount", {email: props.user.email});
+      // await axios.post("http://localhost:5000/deleteMyAccount", {email: props.user.email});
+      await axios.post("https://proiectfa-backend-production.up.railway.app/deleteMyAccount", {email: props.user.email});
       console.log("Contul a fost sters cu succes.");
       dispatch(logout());
       localStorage.removeItem("AuthToken");

@@ -271,7 +271,8 @@ function RegisterForm() {
                   acordOferte: acordOferte,
                 };
                 axios
-                  .post("http://localhost:5000/register", ContNou)
+                  // .post("http://localhost:5000/register", ContNou)
+                  .post("https://proiectfa-backend-production.up.railway.app/register", ContNou)
                   .then((res) => {
                     console.log(
                       "Datele noului utilizator au fost trimise cu succes.",
